@@ -1,2 +1,2 @@
-# kinjal
+# javascript
 code repo for JavaScript
