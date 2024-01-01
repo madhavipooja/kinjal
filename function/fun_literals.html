@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nested_fun</title>
+    <script type="text/javascript">
+        function a(f) {
+            function square(f){
+                return f*f;
+            }
+            return Math.sqrt(square(f))
+        }
+        function b()
+        {
+            var r;
+            r=a(7);
+            document.write(r);
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="button" onclick="b()" value="click">
+    </form>
+</body>
+
+</html>

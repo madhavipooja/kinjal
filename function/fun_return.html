@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fun_return</title>
+    <script type="text/javascript">
+        function add(f,l) {
+            var a;
+            a=f+l;
+            return a;
+        }
+        function return_fun()
+        {
+            var result;
+            result=add('hello! ','world');
+            document.write(result);
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="button" onclick="return_fun()" value="click">
+    </form>
+</body>
+
+</html>
