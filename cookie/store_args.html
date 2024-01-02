@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>store cookie</title>
+</head>
+
+<body>
+    <script>
+        // Function to set a cookie
+        function setCookie(cookieName, cookieValue, expirationDays) {
+            // Calculate the expiration date
+            const expirationDate = new Date();
+            expirationDate.setDate(expirationDate.getDate() + expirationDays);
+
+            // Format the cookie string
+            const cookieString = `${encodeURIComponent(cookieName)}=${encodeURIComponent(cookieValue)}; expires=${expirationDate.toUTCString()}; path=/`;
+
+            // Set the cookie
+            document.cookie = cookieString;
+
+            alert('Cookie set successfully!');
+        }
+
+        // Example usage: Set a cookie named "exampleCookie" with the value "Hello, Cookie!" that expires in 7 days
+        setCookie('cookie example', 'hii, Cookies!', 18);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>store cookie</title>
+</head>
+
+<body>
+    
+</body>
+<script>
+    // Function to set a cookie without arguments
+    function setCookie() {
+        const cookieName = 'exampleCookie';
+        const cookieValue = 'Hello, Cookie!';
+        const expirationDays = 7;
+
+        // Calculate the expiration date
+        const expirationDate = new Date();
+        expirationDate.setDate(expirationDate.getDate() + expirationDays);
+
+        // Format the cookie string
+        const cookieString = `${encodeURIComponent(cookieName)}=${encodeURIComponent(cookieValue)}; expires=${expirationDate.toUTCString()}; path=/`;
+
+        // Set the cookie
+        document.cookie = cookieString;
+
+        alert('Cookie set successfully!');
+    }
+
+    // Example usage: Call the setCookie function without arguments
+    setCookie();
+</script>
+</html>

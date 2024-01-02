@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>read cookie</title>
+</head>
+<body>
+    <script>
+        // Function to read a cookie
+        function readCookie() {
+           var all=document.cookie;
+           ca=allcookies.split(';');
+           for(var i=0;i<ca.length;i++)
+           {
+            name=ca[i].split('=')[0];
+            value=ca[i].split('=')[1];
+            document.write(name);
+            document.write(value);
+           }
+           return name,value;
+           //document.write("all cookie :"+all);
+            // return decodeURIComponent(document.cookie.replace(new RegExp(`(?:(?:^|.*;)\\s*${encodeURIComponent(cookieName).replace(/[-.+*]/g, '\\$&')}\\s*\\=\\s*([^;]*).*$)|^.*$`), '$1')) || null;
+        }
+    
+        // Example usage: Read the value of a cookie named "exampleCookie"
+        const cookieValue = readCookie();
+    
+        if (cookieValue) {
+            alert('Value of "exampleCookie": ' + cookieValue);
+        } else {
+            alert('Cookie not found!');
+        }
+    </script>
+</body>
+</html>
